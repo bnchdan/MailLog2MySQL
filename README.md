@@ -42,8 +42,9 @@ enmod mod rewrite
 /etc/init.d/maillog2mysql start
 exit 0
 ```
-
+```
 chmod +x /etc/rc.local
+```
 
 ### run
 ```
