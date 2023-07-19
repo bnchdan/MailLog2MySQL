@@ -1,7 +1,22 @@
 # MailLog2MySQL
-Parse mail logs to mysql
+Parse mail logs from Postfix and Dovecot to mysql
 
 # Install
+
+### mysql
+```
+CREATE DATABASE maillog;
+GRANT ALL PRIVILEGES ON maillog.* TO 'sammy'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES
+
+```
+
+### install script
+```
+make install
+
+```
+
 ### apache config
 enmod mod rewrite
 ```
@@ -21,13 +36,19 @@ enmod mod rewrite
 ```
 
 
-### create init.d script
-create rc.local 
+### create rc.local
+```
 #!/bin/sh -e
 /etc/init.d/maillog2mysql start
 exit 0
+```
 
 chmod +x /etc/rc.local
+
+### run
+```
+/etc/init.d/maillog2mysql start
+```
 
 # Example API
 ```

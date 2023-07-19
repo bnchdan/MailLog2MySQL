@@ -20,6 +20,6 @@ class PostfixLog:
         try:
             Sql.execute(sql)
         except Exception as e:
-            print(e)
+            #print(e)
             pass
 

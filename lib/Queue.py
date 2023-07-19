@@ -141,7 +141,8 @@ class Queue:
             Queue.q[id].insertToFrom(To, From, Status)
             Queue.remove(id)
         except Exception as e:
-            print(e)
+            #print(e)
+            pass
         return 0
 
 

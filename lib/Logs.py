@@ -10,6 +10,7 @@ class Logs:
     TYPE_POSTFIX    = 3
     TYPE_DOVECOT    = 4
 
+
     def __init__(self):
         self.auth       = []
         self.mail       = []

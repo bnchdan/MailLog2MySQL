@@ -9,8 +9,8 @@ class Config:
         "database" : None,
         "port"     : None
     }
-
     log_file = None
+
 
     @staticmethod
     def read():
