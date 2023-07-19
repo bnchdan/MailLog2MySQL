@@ -1,0 +1,41 @@
+#!/bin/bash
+
+### BEGIN INIT INFO
+# Required-Start:    $all
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start daemon at boot time
+# Description:       Enable service provided by daemon.
+### END INIT INFO
+
+case "$1" in 
+start)
+   #with priority 19
+   if [ -e /var/run/MailLog2MySQL.pid ]; then
+   	echo MailLog2MySQL already running
+   else
+    nice -n 19 /usr/local/bin/MailLog2MySQL &
+    echo $!>/var/run/MailLog2MySQL.pid
+   fi
+   ;;
+stop)
+   kill `cat /var/run/MailLog2MySQL.pid`
+   rm /var/run/MailLog2MySQL.pid
+   ;;
+restart)
+   $0 stop
+   $0 start
+   ;;
+status)
+   if [ -e /var/run/MailLog2MySQL.pid ]; then
+      echo MailLog2MySQL is running, pid=`cat /var/run/MailLog2MySQL.pid`
+   else
+      echo MailLog2MySQL is NOT running
+      exit 1
+   fi
+   ;;
+*)
+   echo "Usage: $0 {start|stop|status|restart}"
+esac
+
+exit 0 
