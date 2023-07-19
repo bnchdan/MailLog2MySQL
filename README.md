@@ -70,7 +70,7 @@ port      = 3306
 log_file  = /var/log/mail.log
 
 #api access
-access = ["127.0.0.1", "192.168.110.158"]
+access = ["127.0.0.1", "192.168.1.1"]
 ```
 
 # Example API
