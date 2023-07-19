@@ -152,4 +152,5 @@ curl http://127.0.0.1:8888/api?table=postfix_logs | jq .
 make delete
 ```
 remove MailLog2MySQL.conf
+
 delete database
