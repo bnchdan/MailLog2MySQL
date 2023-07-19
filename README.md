@@ -55,6 +55,24 @@ chmod +x /etc/rc.local
 /etc/init.d/maillog2mysql start
 ```
 
+### config
+```
+cat /etc/MailLog2MySQL.conf
+
+#mysql settings
+host      = localhost
+user      = sammy
+password  = password
+database  = maillog
+port      = 3306
+    
+#read logs
+log_file  = /var/log/mail.log
+
+#api access
+access = ["127.0.0.1", "192.168.110.158"]
+```
+
 # Example API
 ```
 curl http://127.0.0.1:8888/api?table=dovecot_logs | jq .
