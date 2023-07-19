@@ -1,7 +1,7 @@
 # MailLog2MySQL
 Parse mail logs from Postfix and Dovecot to MySQL
 
-# Install
+# Install 
 
 ### mysql
 ```
@@ -40,7 +40,7 @@ Listen 8888
 a2ensite MailLog2MySQL.conf
 ```
 
-### create rc.local
+### create /etc/rc.local or add line /etc/init.d/maillog2mysql start
 ```
 #!/bin/sh -e
 /etc/init.d/maillog2mysql start
@@ -154,3 +154,5 @@ make delete
 remove MailLog2MySQL.conf
 
 delete database
+
+delete /etc/rc.local or delete line /etc/init.d/maillog2mysql start
