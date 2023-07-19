@@ -4,7 +4,7 @@ from Messages   import Messages
 
 class Queue:
     q={}
-    AVAILABLE   = 10        #5 hour
+    AVAILABLE   = 5*60*60   #5 hour
     LIMIT       = 1000      #maximum number of objects in Queue
     NUM_LOGS    = 0
 
