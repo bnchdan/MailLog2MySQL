@@ -19,7 +19,9 @@ make install
 
 ### apache config
 enmod mod rewrite
+create file MailLog2MySQL.conf
 ```
+Listen 8888
 <VirtualHost *:8888>
         DocumentRoot /var/www/MailLog2MySQL
 
@@ -34,7 +36,9 @@ enmod mod rewrite
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
-
+```
+a2ensite MailLog2MySQL.conf
+```
 
 ### create rc.local
 ```
