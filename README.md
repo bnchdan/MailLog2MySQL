@@ -1,5 +1,5 @@
 # MailLog2MySQL
-Parse mail logs from Postfix and Dovecot to mysql
+Parse mail logs from Postfix and Dovecot to MySQL
 
 # Install
 
@@ -7,7 +7,7 @@ Parse mail logs from Postfix and Dovecot to mysql
 ```
 CREATE DATABASE maillog;
 GRANT ALL PRIVILEGES ON maillog.* TO 'sammy'@'localhost' IDENTIFIED BY 'password';
-FLUSH PRIVILEGES
+FLUSH PRIVILEGES;
 
 ```
 
@@ -144,3 +144,12 @@ curl http://127.0.0.1:8888/api?table=postfix_logs | jq .
     },
 
 ```
+
+### Delete
+
+
+```
+make delete
+```
+remove MailLog2MySQL.conf
+delete database
