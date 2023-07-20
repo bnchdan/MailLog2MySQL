@@ -181,9 +181,18 @@ curl http://127.0.0.1:8888/api?table=postfix_logs | jq .
 
 
 ```
-make delete
+make delete 
+or 
+rm /usr/local/bin/MailLog2MySQL
+rm -rf /usr/lib/MailLog2MySQL
+rm -rf /var/www/MailLog2MySQL
+rm /etc/MailLog2MySQL.conf
+rm /etc/init.d/maillog2mysql
+```
 
-remove MailLog2MySQL.conf
+```
+a2dissite MailLog2MySQL.conf
+remove /etc/apache2/sites-available/MailLog2MySQL.conf
 
 delete database
 
