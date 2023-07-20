@@ -43,7 +43,7 @@ apt install python3-pymysql
 apt install php-mysql
 ```
 
-### install script
+### install MailLog2MySQL
 ```
 make install
 
