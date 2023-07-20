@@ -13,7 +13,8 @@ FLUSH PRIVILEGES;
 
 ### apache config
 a2enmod mod rewrite
-create file /etc/apache2/sites-available/MailLog2MySQL.conf
+
+create file /etc/apache2/sites-available/MailLog2MySQL.conf and add
 ```
 Listen 8888
 <VirtualHost *:8888>
