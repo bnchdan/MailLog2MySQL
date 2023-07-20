@@ -1,5 +1,6 @@
 # MailLog2MySQL
 Parse mail logs from Postfix and Dovecot to MySQL
+Inspired by [mysqmail-dovecot-logger](https://packages.debian.org/stable/mail/mysqmail-dovecot-logger) and [mysqmail-postfix-logger](https://packages.debian.org/sid/mysqmail-postfix-logger) with some improvements and an API interface.
 
 # Install 
 
