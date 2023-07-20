@@ -40,7 +40,8 @@ install and enable PHP
 
 ```
 apt install python3-pymysql
-apt install php-mysql```
+apt install php-mysql
+```
 
 ### install script
 ```
