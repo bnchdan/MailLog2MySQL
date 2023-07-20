@@ -32,9 +32,9 @@ class Config:
             line=line.replace(" ", "")
             splitted = line.split("=")
 
-            if (len(splitted) != 2 and line !=""):
-                Syslog.write(f"error at {line} ")
-                raise Exception (f"error at {line} ")
+            # if (len(splitted) != 2 and line !=""):
+            #     Syslog.write(f"error at {line} ")
+            #     raise Exception (f"error at {line} ")
 
             if ( splitted[0] in Config.mysql ):
                 Config.mysql[splitted[0]] = splitted[1]

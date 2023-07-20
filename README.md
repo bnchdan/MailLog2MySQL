@@ -11,15 +11,9 @@ FLUSH PRIVILEGES;
 
 ```
 
-### install script
-```
-make install
-
-```
-
 ### apache config
-enmod mod rewrite
-create file MailLog2MySQL.conf
+a2enmod mod rewrite
+create file /etc/apache2/sites-available/MailLog2MySQL.conf
 ```
 Listen 8888
 <VirtualHost *:8888>
@@ -39,6 +33,22 @@ Listen 8888
 ```
 a2ensite MailLog2MySQL.conf
 ```
+
+```
+install and enable PHP
+```
+
+```
+apt install python3-pymysql
+apt install php-mysql```
+
+### install script
+```
+make install
+
+```
+
+
 
 ### create /etc/rc.local or add line /etc/init.d/maillog2mysql start
 ```
