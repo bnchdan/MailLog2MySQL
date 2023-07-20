@@ -14,10 +14,13 @@ FLUSH PRIVILEGES;
 ```
 
 ### apache config
-a2enmod mod rewrite
-
-create file /etc/apache2/sites-available/MailLog2MySQL.conf and add
 ```
+a2enmod mod rewrite
+```
+
+```
+create file /etc/apache2/sites-available/MailLog2MySQL.conf and add
+
 Listen 8888
 <VirtualHost *:8888>
         DocumentRoot /var/www/MailLog2MySQL
@@ -192,6 +195,7 @@ rm /etc/init.d/maillog2mysql
 
 ```
 a2dissite MailLog2MySQL.conf
+
 remove /etc/apache2/sites-available/MailLog2MySQL.conf
 
 delete database
