@@ -27,7 +27,7 @@ class Logs{
         SQL::doBind($toBind, $stmt);
         $stmt->execute();
         $num_logs  = $stmt->get_result()->fetch_all()[0][0];
-        $num_pages = floor($num_logs/$log::LIMIT + 0.5);
+        $num_pages = ceil($num_logs/$log::LIMIT);
 
         $msg ="{";
         $msg.="\"number of logs\":".$num_logs.",";

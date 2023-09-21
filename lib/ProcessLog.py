@@ -49,10 +49,10 @@ class ProcessLog:
                     logs.insertToMySQL()
                     # print(logs.num_logs)
 
-                if (Queue.NUM_LOGS > 40):    
+                if (Queue.NUM_LOGS > 4):    
                     Queue.preareToInsert(logs)
 
-                if (logs.num_logs > 100 ):
+                if (logs.num_logs > 10 ):
                     logs.insertToMySQL()
                 i=i+1
             except:
