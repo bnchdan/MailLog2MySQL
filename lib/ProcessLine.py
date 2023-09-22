@@ -154,7 +154,7 @@ class ProcessLine:
         if (words[6][0:4] == "to=<"):
             i = 7
             while True:
-                if ( i == len_words - 1):
+                if ( i == len_words ):
                     break
 
                 if (words[i][0:7] == "status="):
