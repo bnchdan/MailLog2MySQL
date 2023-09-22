@@ -9,6 +9,7 @@ class ProcessLine:
     def main(line, logs):
         words       = line.split(" ")
         len_words   = len(words)
+       
         try:
             if ( len(words) < 5 ):
                 return 1
@@ -135,14 +136,15 @@ class ProcessLine:
 
     @staticmethod   
     def postfix_log(words, len_words, logs):
-
-        if (words[6][:7] == "client="):
-            return Queue.add(words[5][:-1], words[0], words[1], words[2].split(":")[0])
+        
+        # if (words[6][:7] == "client="):
+        #     return Queue.add(words[5][:-1], words[0], words[1], words[2].split(":")[0])
        
         if (words[6][:7] == "removed"):
             return Queue.remove(words[5][:-1])
         
         if (words[6][:12] == "message-id=<"):
+            Queue.add(words[5][:-1], words[0], words[1], words[2].split(":")[0])
             return Queue.addMsgID(words[5][:-1], words[6][12:-2] )
 
         

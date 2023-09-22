@@ -31,6 +31,7 @@ class ProcessLog:
             try:
                 line = file.readline()
                 line = line.split("\r")[0]
+                
                 if not line:
                     time.sleep(1)
                     if os.stat(Config.log_file).st_ino != inode:
@@ -41,7 +42,7 @@ class ProcessLog:
 
                 else:
                     ProcessLine.main(line, logs) 
-
+               
                 tok = time.time()
                 if ( (tok - tik) > 1 ):
                     tik=time.time()

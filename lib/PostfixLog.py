@@ -21,5 +21,6 @@ class PostfixLog:
             Sql.execute(sql)
         except Exception as e:
             #print(e)
+	    #Syslog.write(e)	
             pass
 

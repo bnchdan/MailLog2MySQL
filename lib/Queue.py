@@ -8,7 +8,8 @@ class Queue:
     LIMIT       = 1000      #maximum number of objects in Queue
     NUM_LOGS    = 0
 
-    def __init__ (self, id, timeout, mounth, day, hour):
+    def __init__ (self, id, timeout, month, day, hour):
+
         self.id         = id
         self.month      = month
         self.day        = day
@@ -23,6 +24,7 @@ class Queue:
         self.Subject    = None
         self.toInsert   = False
         Queue.NUM_LOGS = Queue.NUM_LOGS + 1
+
 
 
 
@@ -87,7 +89,6 @@ class Queue:
         Queue.limit()
         if (id in Queue.q):
             return 0
-        
         Queue.q[id] = Queue(
                 id, 
                 int ( time.mktime(time.localtime() ) ) +  Queue.AVAILABLE, 
@@ -191,7 +192,7 @@ class Queue:
     def preareToInsert(logs):
         toDelete = []
         currentTime = time.time()
-        # print(" Queue size: "+str(Queue.NUM_LOGS))
+        
         for id in Queue.q:
             if (currentTime - Queue.q[id].timeout > 0 ):
                 #if expired, insert with status unknown         
