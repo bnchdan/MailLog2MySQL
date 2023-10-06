@@ -1,9 +1,16 @@
 # MailLog2MySQL
-Parse mail logs from Postfix and Dovecot to MySQL.
+MailLog2MySQL is a Python script for parsing and storing email server log (from Dovecot and Postfix) data into a MySQL database. This can be useful for monitoring email traffic, analyzing email server performance, and generating reports.
 
 Inspired by [mysqmail-dovecot-logger](https://packages.debian.org/stable/mail/mysqmail-dovecot-logger) and [mysqmail-postfix-logger](https://packages.debian.org/sid/mysqmail-postfix-logger) with some improvements and an API interface.
 
-# Install 
+
+## Features
+- Parses email server log files in various formats.
+- Extracts relevant information such as sender, recipient, subject, date, and more.
+- Stores parsed data in a MySQL database for easy querying and analysis.
+- Customizable configuration for log file formats and database connection.
+
+# Installation 
 
 ### mysql
 ```
